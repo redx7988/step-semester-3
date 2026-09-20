@@ -1,0 +1,28 @@
+public abstract class GardenTool {
+    public GardenTool() {
+    }
+
+    public abstract String use();
+}
+
+public class CuttingTool extends GardenTool {
+    public CuttingTool() {
+        super();
+    }
+
+    @Override
+    public String use() {
+        return "Using the tool in the garden, blade sharpened first";
+    }
+}
+
+public class Pruner extends CuttingTool {
+    public Pruner() {
+        super();
+    }
+
+    @Override
+    public String use() {
+        return super.use() + ", then trimming branches precisely";
+    }
+}
